@@ -242,34 +242,35 @@ e.g., '2015-06-10-esu'.
 
 <hr/>
 
-{% comment %}
-SYLLABUS
+<h2 id="resources">Further resources</h2>
 
-Show what topics will be covered.
+<ul>
+<li><a href="https://www.rstudio.com/resources/cheatsheets/">Cheatsheets for dplyr, ggplot2 and more</a></li>
+</ul>
 
-1. If your workshop is R rather than Python, remove the comment
-around that section and put a comment around the Python section.
-2. Some workshops will delete SQL.
-3. Please make sure the list of topics is synchronized with what you
-intend to teach.
-4. You may need to move the div's with class="col-md-6" around inside
-the div's with class="row" to balance the multi-column layout.
+<p></p>
+<p>Extra materials/books:</p>
 
-This is one of the places where people frequently make mistakes, so
-please preview your site before committing, and make sure to run
-'tools/check' as well.
-{% endcomment %}
-<h2 id="syllabus">Syllabus</h2>
+<ul>
+<li><a href="https://bookdown.org/rdpeng/exdata/">Exploratory Data Analysis with R</a> by Roger D. Peng - covers principles of exploratory data analysis, including visualisation, clustering (hierarchical, k-means) and dimensionality reduction (PCA)</li>
+<li><a href="http://r4ds.had.co.nz/">R for Data Science</a> by Garrett Grolemund & Hadley Wickham - learn more about using the "tidyverse" package for data analysis</li>
+<li><a href="https://www.huber.embl.de/msmb/">Modern Statistics for Modern Biology</a> by Susan Holmes & Wolfgang Huber - covers many aspects of data analysis relevant for biology from statistical modelling to image analysis</li>
+<li><a href="http://www-bcf.usc.edu/~gareth/ISL/">Introduction to Statistical Learning</a> by Gareth James, Daniela Witten, Trevor Hastie & Robert Tibshirani - introduction to machine learning using R
 
-{% if site.carpentry == "swc" %}
-{% include swc/syllabus.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/syllabus.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/syllabus.html %}
-{% endif %}
+<ul>
+<li>Also see <a href="https://lgatto.github.io/IntroMachineLearningWithR/">this course material</a> for a practical introduction to this topic</li></ul>
+</li>
+
+<li><a href="https://xcelab.net/rm/statistical-rethinking/">Statistical Rethinking</a> by Richard McElreath (not freely available) - an introduction to statistical modelling using R
+<ul>
+<li>Lectures for this course are freely available <a href="https://github.com/rmcelreath/statrethinking_winter2019">here</a></li></ul>
+</li>
+
+</ul>
+
 
 <hr/>
+
 
 {% comment %}
 SETUP
