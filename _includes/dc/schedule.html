@@ -1,55 +1,111 @@
-{% comment %}
-This is the typical schedule for the Data Carpentry workshops.
-The schedule for the different curricula are listed here:
-- dc-ecology
-- dc-genomics
-- dc-socsci
-- dc-geosptial
-{% endcomment %}
+<h3>Day 1</h3>
 
-{% if site.curriculum == "dc-ecology" %}
+<h4>1. <a href="https://datacarpentry.org/spreadsheet-ecology-lesson/">Data organization in spreadsheets</a></h4>
+  <p>
+  Digital data recording often starts with a spreadsheet software (e.g. Excel). 
+  For an effective data analysis, it's crucial to start with a well structured and 
+  formatted dataset. Because of this, before diving into R, we will start by having 
+  a discussion about common issues that should be considered when recording data in spreadsheets.
+  </p>
+
+  <ul>
+    <li>Download data for this lesson <a href="https://ndownloader.figshare.com/files/2252083">here</a>.</li>
+    <li><a href="https://datacarpentry.org/spreadsheet-ecology-lesson/02-common-mistakes/index.html">
+    List of common formatting problems</a>.
+    <ul>
+      <li>You can find an example tidy data 
+        <a href="https://docs.google.com/spreadsheets/d/1VIygwM-x-wuYVGJv1JFFPRosg0DzSXdM1jLf5bHwg7o/edit?usp=sharing">here</a>.
+      </li></ul>
+    </li>
+  </ul>
+
+
+  <h4>2. <a href="https://datacarpentry.org/R-ecology-lesson/index.html">Introduction to R</a></h4>
+  
+  This lesson will cover the very basics of using R with RStudio. 
+    
+  <ul>
+    <li><a href="https://tavareshugo.github.io/data_carpentry_extras/slides_with_exercises/exercises.html#1_intro">Exercises</a></li>
+    <li><a href="https://tavareshugo.github.io/data_carpentry_extras/recap_intro_r/recap_intro_r.html">Summary of R basics</a></li>
+  </ul>
+  
+  <h4>3. <a href="http://www.datacarpentry.org/R-ecology-lesson/03-dplyr.html">Data manipulation with <code>dplyr</code></a></h4>
+
+  This lesson will cover some functions to effectively manipulate and summarise 
+  tabular data using the <code>dplyr</code> package.
+  
+  <ul>
+    <li><a href="https://tavareshugo.github.io/data_carpentry_extras/slides_with_exercises/exercises.html#2_manipulating_data_frames_with_dplyr">Exercises</a></li>
+    <li><a href="https://tavareshugo.github.io/data_carpentry_extras/base-r_tidyverse_equivalents/base-r_tidyverse_equivalents.html">Summary of dplyr functions and their equivalent in base R</a></li>
+  </ul>
+
+
+<h3>Day 2</h3>
+
+  <h4>4. <a href="http://www.datacarpentry.org/R-ecology-lesson/04-visualization-ggplot2.html">Data visualisation with <code>ggplot2</code></a></h4>
+  
+  This lesson teaches you how to use the <code>ggplot2</code> R package to make 
+  a wide range of plot types.
+  
+  <ul>
+    <li><a href="https://tavareshugo.github.io/data_carpentry_extras/slides_with_exercises/exercises.html#3_plotting_with_ggplot2">Exercises</a></li>
+    <li><a href="https://www.data-to-viz.com/">Data to Viz</a> website helps you choose 
+      appropriate visualisations for your data (and also some caveats to think 
+      about when making a graph!).</li>
+  </ul>
+
+<h3>Day 3</h3>
+
+  <h4>6. <a href="https://tavareshugo.github.io/data-carpentry-rnaseq/">Exploratory RNAseq data analysis in R</a></h4>
+
+  <p>
+    In this session we will apply the concepts learned so far to a worked example of 
+    an exploratory data analysis of transcriptomic data.
+  </p>
+  
+  <p></p>
+  <p>During the lesson, we will also learn a few more tricks in R, including:</p>
+
+  <ul>
+  <li><a href="https://datacarpentry.org/R-ecology-lesson/03-dplyr.html#reshaping_with_gather_and_spread">Reshaping data</a></li>
+  <li><a href="https://rawgit.com/bioinformatics-core-shared-training/r-intermediate/master/4.summarise-and-combine.nb.html#joining">Combining tables</a></li>
+  </ul>
+
+  <p></p>
+  <p>Further reading:</p>
+
+  <ul>
+  <li>Conesa et al. (2016) <a href="https://doi.org/10.1186/s13059-016-0881-8">A survey of best practices for RNA-seq data analysis</a>,
+  Genome Biology 17, 13</li>
+  <li>Jake Lever, Martin Krzywinski &amp; Naomi Altman (2017) <a href="https://www.nature.com/articles/nmeth.4346">Principal component analysis</a>,
+  Nature Methods 14, 641–642</li>
+  <li>Naomi Altman &amp; Martin Krzywinski (2017) <a href="https://www.nature.com/articles/nmeth.4299">Clustering</a>, 
+  Nature Methods 14, 545–546</li>
+  </ul>
+
+<!--
 <div class="row">
   <div class="col-md-6">
     <h3>Day 1</h3>
     <table class="table table-striped">
       <tr>
 	<td>Before starting</td>
-	<td><a href="{{ site.pre_survey }}{{ site.github.project_title }}" target="_blank">Pre-workshop survey</a></td>
+	<td><a href="{{ site.dc_pre_survey }}{{ site.github.project_title }}" target="_blank">Pre-workshop survey</a></td>
       </tr>
-      <tr><td>Morning</td> <td> <a href="https://datacarpentry.org/spreadsheet-ecology-lesson/">Data Organization in Spreadsheets</a></td></tr>
-      <tr><td> </td><td><a href="https://datacarpentry.org/OpenRefine-ecology-lesson/">OpenRefine for Data Cleaning</a></td></tr>
-      <tr>
-        <td>Afternoon</td>
-        <td>
-          {% if site.flavor == "r" %}
-          <a href="https://datacarpentry.org/R-ecology-lesson/">Introduction to R</a>
-          {% elsif site.flavor == "python" %}
-          <a href="https://datacarpentry.org/python-ecology-lesson/">Introduction to Python</a>
-          {% else %}
-          {% include warning-flavor.html %}
-          {% endif %}
-      </td></tr>
+      <tr><td>Morning</td> <td> <a href="http://www.datacarpentry.org/spreadsheet-ecology-lesson/">Data organization in spreadsheets</a></td></tr>
+      <tr><td> </td><td><a href="http://www.datacarpentry.org/OpenRefine-ecology-lesson/">OpenRefine for data cleaning</a></td></tr>
+      <tr><td>Afternoon</td><td><a href="http://www.datacarpentry.org/R-ecology-lesson/">Introduction to R</a></td></tr>
       <tr> <td>Evening</td> <td>END</td> </tr>
     </table>
   </div>
   <div class="col-md-6">
     <h3>Day 2</h3>
     <table class="table table-striped">
-      <tr> <td>Morning</td>
-        <td>
-          {% if site.flavor == "r" %}
-          <a href="https://datacarpentry.org/R-ecology-lesson/">Continuation of R: Data analysis and Visualization</a>
-          {% elsif site.flavor == "python" %}
-          <a href="https://datacarpentry.org/python-ecology-lesson/">Continuation of Python: Data analysis and Visualization</a>
-          {% else %}
-          {% include warning-flavor.html %}
-          {% endif %}
-        </td>
-      </tr>
-      <tr> <td>Afternoon</td><td><a href="https://datacarpentry.org/sql-ecology-lesson/">Data Management with SQL</a></td></tr>
+      <tr> <td>Morning</td> <td><a href="http://www.datacarpentry.org/R-ecology-lesson/">Continuation of R: data analysis & visualization</a></td></tr>
+      <tr> <td>Afternoon</td><td><a href="http://www.datacarpentry.org/sql-ecology-lesson/">Data management with SQL</a></td></tr>
       <tr>
 	<td>Evening</td>
-	<td><a href="{{ site.dc_survey }}{{ site.github.project_title }}" target="_blank">Post-workshop survey</a></td>
+	<td><a href="{{ site.dc_post_survey }}{{ site.github.project_title }}" target="_blank">Post-workshop survey</a></td>
       </tr>
       <tr>
 	<td> </td>
@@ -58,125 +114,4 @@ The schedule for the different curricula are listed here:
     </table>
   </div>
 </div>
-
-{% elsif site.curriculum == "dc-genomics" %}
-
-<div class="row">
-  <div class="col-md-6">
-    <h3>Day 1</h3>
-    <table class="table table-striped">
-      <tr>
-	<td>Before starting</td>
-	<td><a href="{{ site.pre_survey }}{{ site.github.project_title }}" target="_blank">Pre-workshop survey</a></td>
-      </tr>
-      <tr><td>Morning</td> <td> <a href="https://datacarpentry.org/organization-genomics/">Project Organization and Management</a></td></tr>
-      <tr><td> </td><td><a href="https://datacarpentry.org/shell-genomics/">Introduction to the Command Line</a></td></tr>
-      <tr><td>Afternoon</td><td><a href="https://datacarpentry.org/wrangling-genomics/">Data Wrangling and Processing</a></td></tr>
-			<tr> <td>Evening</td> <td>END</td> </tr>
-    </table>
-  </div>
-  <div class="col-md-6">
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-			<tr><td>Morning</td><td><a href="https://datacarpentry.org/wrangling-genomics/">Continuation: Data Wrangling and Processing</a></td></tr>
-			<tr><td>Afternoon</td><td><a href="https://datacarpentry.org/cloud-genomics/">Introduction to Cloud Computing for Genomics</a></td></tr>
-      <tr>
-	<td>Evening</td>
-	<td><a href="{{ site.post_survey }}{{ site.github.project_title }}" target="_blank">Post-workshop survey</a></td>
-      </tr>
-      <tr>
-	<td> </td>
-	<td> END </td>
-      </tr>
-    </table>
-  </div>
-</div>
-
-{% elsif site.curriculum == "dc-socsci" %}
-
-<div class="row">
-  <div class="col-md-6">
-    <h3>Day 1</h3>
-    <table class="table table-striped">
-      <tr>
-	<td>Before starting</td>
-	<td><a href="{{ site.pre_survey }}{{ site.github.project_title }}" target="_blank">Pre-workshop survey</a></td>
-      </tr>
-      <tr><td>Morning</td> <td> <a href="https://datacarpentry.org/spreadsheets-socialsci/">Data Organization in Spreadsheets</a></td></tr>
-      <tr><td> </td><td><a href="https://datacarpentry.org/openrefine-socialsci/">OpenRefine for Data Cleaning</a></td></tr>
-      <tr><td>Afternoon</td><td><a href="https://datacarpentry.org/r-socialsci/">Introduction to R</a></td></tr>
-      <tr> <td>Evening</td> <td>END</td> </tr>
-    </table>
-  </div>
-  <div class="col-md-6">
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-      <tr> <td>Morning</td> <td><a href="https://datacarpentry.org/r-socialsci/">Continuation of R: Data Analysis & Visualization</a></td></tr>
-      <tr> <td>Afternoon</td><td><a href="https://datacarpentry.org/sql-socialsci/">Data Management with SQL</a></td></tr>
-      <tr>
-	<td>Evening</td>
-	<td><a href="{{ site.post_survey }}{{ site.github.project_title }}" target="_blank">Post-workshop survey</a></td>
-      </tr>
-      <tr>
-	<td> </td>
-	<td> END </td>
-      </tr>
-    </table>
-  </div>
-</div>
-
-
-{% elsif site.curriculum == "dc-geospatial" %}
-
-<div class="row">
-  <div class="col-md-6">
-    <h3>Day 1</h3>
-    <table class="table table-striped">
-      <tr>
-	<td>Before starting</td>
-	<td><a href="{{ site.pre_survey }}{{ site.github.project_title }}" target="_blank">Pre-workshop survey</a></td>
-      </tr>
-      <tr>
-        <td>Morning</td>
-        <td><a href="https://datacarpentry.org/organization-geospatial/">Introduction to Geospatial Concepts</a>
-        </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td><a href="https://datacarpentry.org/r-intro-geospatial/">Introduction to R for Geospatial Data</a></td>
-      </tr>
-      <tr>
-        <td>Afternoon</td>
-        <td><a href="https://datacarpentry.org/r-intro-geospatial/">Introduction to R for Geospatial Data (continued)</a></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><a href="https://datacarpentry.org/r-raster-vector-geospatial/">Introduction to Geospatial Raster and Vector Data with R</a> (Part 1)</td>
-      </tr>
-      <tr>
-        <td>Evening</td>
-        <td>END</td>
-      </tr>
-    </table>
-  </div>
-
-  <div class="col-md-6">
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-      <tr> <td>Morning</td> <td><a href="https://datacarpentry.org/r-raster-vector-geospatial/">Introduction to Geospatial Raster and Vector Data with R</a> (Part 2)</td></tr>
-      <tr> <td>Afternoon</td><td><a href="https://datacarpentry.org/r-raster-vector-geospatial/">Introduction to Geospatial Raster and Vector Data with R</a> (Part 3)</td></tr>
-      <tr>
-	<td>Evening</td>
-	<td><a href="{{ site.post_survey }}{{ site.github.project_title }}" target="_blank">Post-workshop survey</a></td>
-      </tr>
-      <tr>
-	<td> </td>
-	<td> END </td>
-      </tr>
-    </table>
-  </div>
-</div>
-
-{% else %}
-{% include warning-curriculum.html %}
-{% endif %}
+-->
